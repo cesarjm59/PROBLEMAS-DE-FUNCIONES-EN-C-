@@ -1,0 +1,65 @@
+#include <iostream>
+using namespace std;
+#include <vector>
+
+void Ascendente (int vector[], int n){
+int aux;
+
+    for(int i=0; i<n; i++){
+    for(int j=i+1; j<n;j++){
+        if(vector[i]>vector[j]){
+            aux=vector[i];
+            vector[i]=vector[j];
+            vector[j]=aux;
+        }
+    }
+  }
+}
+
+void Descendente (int vector[], int n){
+int aux;
+
+     for(int i=0; i<n; i++){
+        for(int j=i+1; j<n;j++){
+        if(vector[i]<vector[j]){
+            aux=vector[i];
+            vector[i]=vector[j];
+            vector[j]=aux;
+        }
+    }
+  }
+}
+
+void mostrarVector(int vector[], int n) {
+    for (int i = 0; i < n; i++) {
+        cout << vector[i] << " ";
+    }
+    cout << endl;
+}
+
+int main() {
+    int vector[100];
+    int n;
+
+    cout << "--- INGRESO DE DATOS ---" << endl;
+    cout<<"digame la cantidad de datos que quiere para su vector"<<endl;
+    cin>>n;
+    
+    for (int i = 0; i < n; i++) {
+        cout << "Introduce el valor para la posicion [" << i << "]: ";
+        cin >> vector[i];
+    }
+    
+     cout << "\nVector original: ";
+    mostrarVector(vector, n);
+
+    Ascendente(vector, n);
+    cout << "Vector Ascendente (Menor a Mayor): ";
+    mostrarVector(vector, n);
+    
+    Descendente(vector, n);
+    cout << "Vector Descendete (Mayor a menor): ";
+    mostrarVector(vector, n);
+    
+    return 0;
+}
