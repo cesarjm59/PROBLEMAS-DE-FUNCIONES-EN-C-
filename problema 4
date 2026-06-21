@@ -1,0 +1,28 @@
+//Construya una función que realice intercambio de los valores entre 2 variables
+#include <iostream>
+using namespace std;
+
+void intercambio(int *x, int *y){
+    int temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
+    
+    return;
+}
+int main(){ 
+    int a, b;
+    cout<<"Ingrese 2 datos numericos: "<<endl;
+    cin>>a;
+    cin>>b;
+    
+    cout<<"Sus datos originales son: "<<endl;
+    cout<<"a= "<< a;
+    cout<<" y "<< "b= "<< b << endl;
+    
+    intercambio(&a, &b);
+    cout<<"Sus datos intercambiados son: "<<endl;
+    cout<<"a= "<< a;
+    cout<<" y "<< "b= "<< b << endl;
+    return 0;
+}
