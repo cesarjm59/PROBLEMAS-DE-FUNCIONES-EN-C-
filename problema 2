@@ -1,0 +1,42 @@
+//4 operaciones aritmeticas/suma, resta, división y multiplicación)
+#include <iostream>
+using namespace std;
+
+double division(double a, double b){
+    return a/b;
+} 
+
+int producto(int a, int b){
+    return a*b;
+} 
+
+int resta(int a, int b){
+    return a-b;
+} 
+int sumar(int a, int b){
+    return a+b;
+}    
+int main() {
+    int num1, num2;
+    int operacion1, operacion2 = 0, operacion4 = 0;
+    double operacion3 = 0;
+    cout<<"Ingrese 2 numeros:"<<endl;
+    cin>>num1;
+    cin>>num2;
+    
+        
+    operacion1 = sumar(num1, num2);
+    operacion2 = resta(num1, num2);
+    operacion3 = division(num1, num2);
+    operacion4 = producto(num1, num2);
+    
+    cout << "El resultado de la suma es: " << operacion1 << endl;
+    cout << "El resultado de la resta es: " << operacion2 << endl;
+    cout << "El resultado de la multiplicacion es: " << operacion4 << endl;
+if(num2==0){
+        cout<<"En la division no puedes divir entre '0'"<<endl;
+    } else{
+    cout << "El resultado de la division es: " << operacion3 << endl;
+}
+    return 0;
+}
