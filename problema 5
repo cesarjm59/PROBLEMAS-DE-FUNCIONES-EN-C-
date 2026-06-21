@@ -1,0 +1,34 @@
+//Realizar una función, en el cual se ingresa un número entero de varias cifras y un entero con una posición y se retorna el dígito de dicha posición.– 
+// Ejemplo:
+// • Entrada: 987  2
+// • Salida  :  8
+#include <iostream>
+using namespace std;
+
+int buscar(int x, int k){
+    int i, n;
+    if (k <= 0 || x < 0) return -1;
+    
+    for (i = 0; i < k - 1; i++) {
+        x = x / 10;
+    }
+    return (x % 10); 
+}
+int main(){ 
+    int n, k, digito;
+    
+    cout<<"Ingrese numero: "<<endl;
+    cin>>n;
+    
+    cout<<"Ingrese la posicion: "<<endl;
+    cin>>k;
+    
+    digito = buscar(n, k);
+    
+    if (digito < 0) {
+       cout<<"No encontrado"<<endl;
+    } else {
+        cout<<"El digito encontrado es: " << digito <<endl;
+    }
+    return 0; 
+}
