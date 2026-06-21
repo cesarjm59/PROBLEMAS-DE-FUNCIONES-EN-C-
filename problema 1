@@ -1,0 +1,19 @@
+//Construya un programa que calcule el cuadrado de los 10 primeros números enteros
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+    
+int cuadrado(int x){
+    int r;
+    r=x*x;
+    return r;
+}    
+int main() {
+    int i, resultado;
+    cout << "El cuadrado de los 10 primeros numeros";
+    for(int i=0; i<10; i++ ){
+        resultado = cuadrado(i);
+        cout<<" \nEl cuadrado de "<< i << " : " << resultado;
+    }
+    return 0;
+}
