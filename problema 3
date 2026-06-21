@@ -1,0 +1,21 @@
+//Construya una función que calcule la suma de los k primeros números enteros impares
+#include <iostream>
+using namespace std;
+    
+int SumaImpares(int x){
+    int r;
+    r=x*x;
+    return r;
+}    
+int main() {
+    int n, resultado;
+    
+    cout << "Ingrese la cantiadad de los primeros numeros impares:"<<endl;
+    cin>>n;
+    
+    cout << "La suma de los primero "<< n <<" numero impares es: "<<endl;
+    resultado = SumaImpares(n);    
+    
+    cout<<resultado;
+    return 0;
+}
